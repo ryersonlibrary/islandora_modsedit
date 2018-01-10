@@ -63,9 +63,9 @@ function islandora_regenerate_menu() {
       'title' => 'Regenerate',
       'type' => MENU_LOCAL_TASK,
       'page callback' => 'islandora_regenerate_view',
-      'page arguments' => array(3),
+      'page arguments' => array(2),
       'access callback' => 'islandora_regenerate_access_callback',
-      'access arguments' => array(3),
+      'access arguments' => array(2),
      
     ),
   );
