@@ -50,3 +50,35 @@ function islandora_modsedit_view(AbstractObject $object) {
 	drupal_goto("islandora/object/{$object->id}/datastream/MODS/edit");
 }
 
+
+
+
+
+/*
+* Display a link directly to regenerate derivatives, if the user has permissions
+*/
+function islandora_regenerate_menu() {
+  return array(
+    'islandora/object/%islandora_object/regenerate' => array(
+      'title' => 'Regenerate',
+      'type' => MENU_LOCAL_TASK,
+      'page callback' => 'islandora_regenerate_view',
+      'page arguments' => array(3),
+      'access callback' => 'islandora_regenerate_access_callback',
+      'access arguments' => array(3),
+     
+    ),
+  );
+}
+
+/**
+ * Access callback.
+ */
+function islandora_regenerate_access_callback($object) {
+  return is_object($object) && islandora_object_access(ISLANDORA_REGENERATE_DERIVATIVES, $object);
+}
+
+function islandora_regenerate_view(AbstractObject $object) {
+	drupal_goto("islandora/object/{$object->id}/regenerate");
+}
+

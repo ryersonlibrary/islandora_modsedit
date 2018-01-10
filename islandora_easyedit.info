@@ -1,5 +1,5 @@
 name = Islandora Easy Edit
-description = "Add the edit button"
+description = "Add the edit buttons"
 dependencies[] = islandora
 package = Islandora Tools
 version = 7.x-dev
