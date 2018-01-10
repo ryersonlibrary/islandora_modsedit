@@ -68,6 +68,6 @@ function islandora_regenerate_access_callback($object) {
 }
 
 function islandora_regenerate_view(AbstractObject $object) {
-	drupal_goto("islandora/object/{$object->id}/manage/datastreams/locking/lock?destination=islandora/object/{$object->id}/regenerate");
+	drupal_goto("islandora/object/{$object->id}/manage/datastreams/locking/lock", array('query' => array('destination' => 'islandora/object/{$object->id}/regenerate')));
 }
 
