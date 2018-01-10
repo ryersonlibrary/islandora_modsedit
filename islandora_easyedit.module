@@ -16,7 +16,7 @@ function islandora_easyedit_menu() {
       'access callback' => 'islandora_modsedit_access_callback',
       'access arguments' => array(2),
     ),
-    'islandora/object/%islandora_object/regenerate' => array(
+    'islandora/object/%islandora_object/regenerate_derivatives' => array(
       'title' => 'Regenerate',
       'type' => MENU_LOCAL_TASK,
       'page callback' => 'islandora_regenerate_view',
